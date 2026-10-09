@@ -1,0 +1,14 @@
+node_modules/
+dist/
+bin/
+obj/
+.env
+.env.local
+*.db
+*.db-shm
+*.db-wal
+*.log
+artifacts/
+output/
+.playwright-cli/
+*.tsbuildinfo
