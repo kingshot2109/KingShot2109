@@ -314,6 +314,39 @@ export default function App() {
                 {t("scrollExplore")}
               </a>
             </section>
+            <section
+              className="recruitment-poster-section"
+              aria-label={`Kingdom ${config.kingdom} recruitment poster`}
+            >
+              <div className="container">
+                <div className="poster-heading">
+                  <div className="poster-status">
+                    <span />
+                    {t("recruitmentOpen")}
+                    <b>#{config.kingdom}</b>
+                  </div>
+                  <a className="button gold poster-apply" href="#apply">
+                    {t("applyNow")}
+                    <ArrowUpRight size={16} />
+                  </a>
+                </div>
+                <a
+                  className="poster-frame"
+                  href="#apply"
+                  aria-label={`${t("applyNow")} — Kingdom ${config.kingdom}`}
+                >
+                  <img
+                    src="/images/2109%20Recruit%20Poster.jpg"
+                    alt={`Kingdom ${config.kingdom} recruitment poster featuring the ORO, PHX, Val, HYD, and BTC alliances`}
+                    loading="eager"
+                  />
+                </a>
+                <div className="poster-footer" aria-hidden="true">
+                  <span>ALLIANCE RECRUITMENT</span>
+                  <span>SECTOR {config.kingdom} // EST. TO RISE</span>
+                </div>
+              </div>
+            </section>
             <section id="power" className="power-strip">
               <div className="container">
                 <div className="stats-grid">
