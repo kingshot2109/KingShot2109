@@ -1,6 +1,6 @@
 export const config = {
   kingdom: import.meta.env.VITE_KINGDOM || "2109",
-  discord: import.meta.env.VITE_DISCORD_INVITE || "",
+  discord: import.meta.env.VITE_DISCORD_INVITE || "https://discord.gg/9ccyN53fC",
   siteUrl: import.meta.env.VITE_SITE_URL || "",
   apiUrl: (import.meta.env.VITE_API_URL || "").replace(/\/$/, ""),
   alliances: [
