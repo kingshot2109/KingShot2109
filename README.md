@@ -39,7 +39,9 @@ The API integration check launches an isolated server on 5081 with a random key 
 
 ## Cloudflare Pages
 
-Use repository root, build `npm ci && npm run build`, output apps/web/dist, Node 22, and production frontend environment variables. public/_redirects supports SPA navigation to /admin. Configure the public API origin with VITE_API_URL.
+Deploy this frontend as a **Cloudflare Pages** project, not a Workers application. Set the repository root as the project root, use `npm run build` as the build command, set the build output directory to `apps/web/dist`, and use Node 22 with the production frontend environment variables. Let Pages deploy the build output; do not set `npx wrangler deploy` as a deploy command, because that deploys a Worker and does not publish this Pages site. `public/_redirects` supports SPA navigation to `/admin`. Configure the public API origin with `VITE_API_URL`.
+
+For a manual Pages deployment after building, run `npx wrangler pages deploy apps/web/dist --project-name <your-pages-project-name>`.
 
 ## API hosting
 
