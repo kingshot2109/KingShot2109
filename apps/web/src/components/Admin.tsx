@@ -111,6 +111,8 @@ export default function Admin() {
     setLoading(true);
     setError("");
     try {
+      if (!config.apiUrl) throw new ApiError("requestError", 503);
+
       const response = await fetch(
         `${config.apiUrl}/api/admin/applications/export?${params}`,
         { headers: { Authorization: `Bearer ${key}` } },
