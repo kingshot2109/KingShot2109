@@ -11,4 +11,5 @@ obj/
 artifacts/
 output/
 .playwright-cli/
+.wrangler/
 *.tsbuildinfo

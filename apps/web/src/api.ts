@@ -34,7 +34,10 @@ export async function api<T>(
   options: RequestInit = {},
   key?: string,
 ): Promise<T> {
-  if (!config.apiUrl) throw new ApiError("requestError", 503);
+  const isStaticApplicationSubmit =
+    path === "/applications" && options.method === "POST";
+  if (!config.apiUrl && !isStaticApplicationSubmit)
+    throw new ApiError("requestError", 503);
 
   let response: Response;
   try {

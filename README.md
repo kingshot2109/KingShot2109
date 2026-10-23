@@ -39,11 +39,23 @@ The API integration check launches an isolated server on 5081 with a random key 
 
 ## Cloudflare Pages
 
-For a free static team preview, connect this GitHub repository to **Cloudflare Pages** and create a Pages project (not a Workers application). Set the repository root as the project root, use `npm run build` as the build command, set the build output directory to `apps/web/dist`, and use Node 22. Leave `VITE_API_URL` unset for a static-only preview; the public site renders normally, while application submission and admin data actions remain unavailable instead of sending requests to a missing API. The existing API code is retained and becomes active again when a real API origin is configured. `public/_redirects` supports SPA navigation to `/admin`.
+The public site and recruitment form are deployed as **Cloudflare Pages** with a Pages Function at `/api/applications` and a D1 database. Keep `VITE_API_URL` unset so the form uses this same-origin function. The function validates applications, requires consent, checks the honeypot, rate-limits submissions, and stores accepted applications as `Pending`. It stores a SHA-256 hash for rate limiting rather than the raw client IP. The admin dashboard still requires the separately hosted .NET API; D1 has no public read or admin endpoint.
 
-After the first successful build, share the `https://<project-name>.pages.dev` URL shown in the Cloudflare Pages dashboard with your team. Set `VITE_SITE_URL` to that URL if you want canonical and social metadata populated, then redeploy. Let Pages deploy the build output; do not set `npx wrangler deploy` as a deploy command, because that deploys a Worker and does not publish this Pages site. For a working recruitment form and admin dashboard, separately host the API and configure the public API origin with `VITE_API_URL`.
+The Pages project and D1 binding are configured in `apps/web/wrangler.jsonc`. After changing the schema, run the migration from `apps/web`:
 
-For a manual Pages deployment after building, run `npx wrangler pages deploy apps/web/dist --project-name <your-pages-project-name>`.
+```powershell
+npx wrangler d1 migrations apply kingshot-applications --remote
+```
+
+Build at the repository root, then deploy from `apps/web`:
+
+```powershell
+npm run build
+Set-Location apps/web
+npx wrangler pages deploy dist --project-name kingshot-recruitment --branch main
+```
+
+The team URL is `https://kingshot-recruitment.pages.dev`. Set `VITE_SITE_URL` to that URL if you want canonical and social metadata populated, then rebuild and redeploy. These Wrangler uploads are manual; repository pushes alone do not publish a new Pages deployment.
 
 ## API hosting
 

@@ -67,7 +67,10 @@ export const config = {
       accent: "gold",
       description:
         "BTC represents strength, loyalty, and unity. We’re a laid-back alliance that knows how to have fun but also knows how to fight and win. We believe real life always comes first, and nobody should feel like the game is a second job.\n\nWe fight hard, stand together, and celebrate our victories as a team. No unnecessary drama, no unrealistic expectations—just good people, strong teamwork, and a brotherhood that has each other’s backs.\n\nReal life first. Brotherhood always. Victory.",
-      events: [],
+      events: [
+        { label: "bearTrapOne", times: ["19:00"], zone: "UTC" },
+        { label: "bearTrapTwo", times: ["02:00"], zone: "UTC" },
+      ],
     },
   ],
 };
