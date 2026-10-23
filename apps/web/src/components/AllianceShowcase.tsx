@@ -94,9 +94,15 @@ export default function AllianceShowcase() {
               <div className="alliance-emblem">
                 <Icon size={39} strokeWidth={1.3} />
               </div>
-              <h3>{alliance.name}</h3>
-              <p className="alliance-story" lang="en">
-                {alliance.description}
+              <h3>
+                {t(`${alliance.localeKey}AllianceName`, {
+                  defaultValue: alliance.name,
+                })}
+              </h3>
+              <p className="alliance-story">
+                {t(`${alliance.localeKey}AllianceDescription`, {
+                  defaultValue: alliance.description,
+                })}
               </p>
               <div className="alliance-events">
                 {alliance.events.length ? (
@@ -106,7 +112,10 @@ export default function AllianceShowcase() {
                         {t(event.label, { defaultValue: event.label })}
                       </span>
                       <strong>
-                        {event.times.join(" · ")} <small>{event.zone}</small>
+                        {event.times
+                          .map((time) => t(time, { defaultValue: time }))
+                          .join(" · ")}
+                        {event.zone && <small>{event.zone}</small>}
                       </strong>
                     </div>
                   ))

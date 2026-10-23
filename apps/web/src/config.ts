@@ -6,6 +6,7 @@ export const config = {
   alliances: [
     {
       tag: "ORO",
+      localeKey: "oro",
       name: "Ouroboros",
       icon: "infinity",
       accent: "emerald",
@@ -18,41 +19,54 @@ export const config = {
     },
     {
       tag: "PHX",
+      localeKey: "phx",
       name: "Phoenix",
       icon: "flame",
       accent: "ember",
       description:
         "From the ashes, we are reborn! Burning in a blaze of glory, we rise to victory! Experienced leadership from multiple Kingdoms! Join now and learn from the best!",
       events: [
-        { label: "BT 1", times: ["12:00"], zone: "UTC" },
-        { label: "BT 2", times: ["01:15"], zone: "UTC" },
+        { label: "bearTrapOne", times: ["12:00"], zone: "UTC" },
+        { label: "bearTrapTwo", times: ["01:15"], zone: "UTC" },
         { label: "vikingsEvent", times: ["14:00", "02:00"], zone: "UTC" },
       ],
     },
     {
       tag: "Val",
+      localeKey: "val",
       name: "Valyria",
       icon: "swords",
       accent: "silver",
       description:
-        "Valar Morghulis and welcome to the Valyrian Empire. Join our team. Lets conquer together!",
-      events: [],
+        "Valyria — Forged by Fire, Bound by Blood!\n\nEmpires may fall, but legends never die. Forged in fire and tempered by war, Valyria stands unbroken. United by strength, loyalty, and an unyielding will, we rise to face every challenge. We do not fear the flames — we are the fire. 🐉🔥\n\nWe have dragons, Warriors, tequila and questionable sleep schedules 😅",
+      events: [
+        { label: "bearTrapOne", times: ["04:00"], zone: "UTC" },
+        { label: "bearTrapTwo", times: ["18:00"], zone: "UTC" },
+        { label: "vikingsEvent", times: ["04:35", "18:35"], zone: "UTC" },
+        { label: "happyHour", times: ["everyTwoHours"], zone: "" },
+      ],
     },
     {
       tag: "HYD",
+      localeKey: "hyd",
       name: "Hydra",
       icon: "hydra",
       accent: "violet",
       description:
         "We are multi headed, we are mythological. We are the hydra and our members are the heads.",
-      events: [],
+      events: [
+        { label: "bearTrapOne", times: ["10:00"], zone: "UTC" },
+        { label: "bearTrapTwo", times: ["20:00"], zone: "UTC" },
+      ],
     },
     {
       tag: "BTC",
-      name: "Surreallity",
+      localeKey: "btc",
+      name: "Built Through Brotherhood",
       icon: "crown",
       accent: "gold",
-      description: "Let's grow, be active, Go BTC.",
+      description:
+        "BTC represents strength, loyalty, and unity. We’re a laid-back alliance that knows how to have fun but also knows how to fight and win. We believe real life always comes first, and nobody should feel like the game is a second job.\n\nWe fight hard, stand together, and celebrate our victories as a team. No unnecessary drama, no unrealistic expectations—just good people, strong teamwork, and a brotherhood that has each other’s backs.\n\nReal life first. Brotherhood always. Victory.",
       events: [],
     },
   ],

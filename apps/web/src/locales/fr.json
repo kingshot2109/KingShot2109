@@ -156,5 +156,19 @@
   "galleryKing": "Le roi",
   "galleryHeroes": "Recrutement de héros",
   "galleryCompanions": "Nos compagnons",
-  "galleryAcademy": "L’académie"
+  "galleryAcademy": "L’académie",
+  "oroAllianceName": "Ouroboros",
+  "oroAllianceDescription": "Ouroboros symbolise un cycle éternel de force, de renouveau et d’unité. Ensemble, nous grandissons, nous reconstruisons et revenons plus forts, quel que soit le défi.",
+  "phxAllianceName": "Phoenix",
+  "phxAllianceDescription": "Nous renaissons de nos cendres ! Dans un brasier de gloire, nous nous élevons vers la victoire ! Notre direction possède une expérience acquise dans plusieurs royaumes. Rejoignez-nous et apprenez des meilleurs !",
+  "valAllianceName": "Valyria",
+  "valAllianceDescription": "Valyria — Forgée par le feu, liée par le sang !\n\nLes empires peuvent tomber, les légendes ne meurent jamais. Forgée par le feu et trempée par la guerre, Valyria demeure invaincue. Unis par la force, la loyauté et une volonté inébranlable, nous relevons chaque défi. Nous ne craignons pas les flammes : nous sommes le feu. 🐉🔥\n\nNous avons des dragons, des guerriers, de la tequila et des horaires de sommeil discutables 😅",
+  "hydAllianceName": "Hydra",
+  "hydAllianceDescription": "Nous avons plusieurs têtes et appartenons à la mythologie. Nous sommes l’Hydre, et nos membres en sont les têtes.",
+  "btcAllianceName": "Bâtis par la fraternité",
+  "btcAllianceDescription": "BTC incarne la force, la loyauté et l’unité. Notre alliance décontractée sait s’amuser, mais aussi se battre et gagner. La vie réelle passe toujours en premier : le jeu ne doit jamais ressembler à un deuxième travail.\n\nNous nous battons avec ardeur, restons soudés et célébrons nos victoires en équipe. Pas de drame inutile ni d’attentes irréalistes : des gens bien, un solide esprit d’équipe et une fraternité qui veille sur chacun.\n\nLa vraie vie d’abord. La fraternité toujours. La victoire.",
+  "bearTrapOne": "Piège à ours 1",
+  "bearTrapTwo": "Piège à ours 2",
+  "happyHour": "Happy hour",
+  "everyTwoHours": "Toutes les 2 heures"
 }

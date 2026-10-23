@@ -357,7 +357,14 @@ export default function App() {
                       config.alliances.reduce(
                         (sum, a) =>
                           sum +
-                          a.events.reduce((n, e) => n + e.times.length, 0),
+                          a.events.reduce(
+                            (n, e) =>
+                              n +
+                              e.times.filter((time) =>
+                                /^\d{2}:\d{2}$/.test(time),
+                              ).length,
+                            0,
+                          ),
                         0,
                       ),
                       "",
